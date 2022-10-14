@@ -108,17 +108,22 @@
 }
 
 header {
-   
+  
+   background-color: white;
+   height: auto;
+   width: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
    display: flex;
    justify-content: space-between;
+   align-items: center;
+    left: 354px;
    padding: 1rem 1.5rem;
    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-   position: fixed;
-   left: 345px;
-   width: calc(100% - 345px);
-   top: 0;
-   z-index: 100;
-   transition: left 300ms;
+   height: 100px;
+   transition: 0.5s;
+   width: calc(100% - 50px);
 }
 
 #nav-toggle{
@@ -182,6 +187,7 @@ header label span {
 .user-wrapper {
    display: flex;
    align-items: center;
+   
 }
 
 .user-wrapper img {
