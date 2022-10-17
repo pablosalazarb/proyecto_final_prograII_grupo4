@@ -5,8 +5,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 -->
 
     <head>
-        <title>SOFTECH co</title>
-        <meta charset="UTF-8">
+        <title>Log in</title>
+       <meta charset="UTF-8">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="https://raw.githubusercontent.com/Suzzanne20/ResourceNekoStation/main/chiphd_106075.ico" type="image/x-icon"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" >
@@ -15,22 +16,70 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
     <body>
-        <div class="box">
-            <div class="form"> 
-                <div class="text-center"><img src="https://raw.githubusercontent.com/Suzzanne20/ResourceNekoStation/main/logo%20Softech%202.png" width="120"></div>
-               <div class="inputBox">
-                    <h3>Inicio</h3>
-                    <input type="text" required="required" id="user">
-                    <span>Usuario</span><i></i></div>
-                <div class="inputBox">
-                    <input type="password" required="required" id="pass">
-                    <span>Contraseña</span><i></i></div>
-                <div class="forgotlink">
-                    <a href="#">Olvidé mi contraseña</a>
-                </div> 
-                <div class="text-center"><input type="submit" value="Login" onclick="login()"></div><br>
-            </div>
+          <div class="container">
+              <input type="checkbox" id="flip">
+            
+    
+                   <div class="cover">
+      <div class="front">
+        <img src="https://st3.depositphotos.com/4678277/35807/i/600/depositphotos_358072788-stock-photo-top-above-high-angle-view.jpg" alt="">
+      
+      </div>
+      <div class="back">
+        <img class="" src="https://cloud.fullstackacademy.com/image1_190429_143605.jpg?mtime=20190429143606" alt="">
+        <div class="text">
+          <span class="text-1">Complete miles of journey <br> with one step</span>
+          <span class="text-2">Let's get started</span>
         </div>
+      </div>
+    </div>
+              
+                <div class="forms"> 
+                    <div class="form-content">
+                        <div class="login-form">
+                            
+                            <div class="title">Admin Log in</div>
+                    <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" required="required" id="user" placeholder="Enter your email">
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" required="required" id="pass" placeholder="Enter your password">
+              </div>
+              <div class="text"><a href="#">Forgot password?</a></div>
+              <div class="button input-box">
+                <input type="submit" value="Login" onclick="login()">
+              </div>
+              <div class="text sign-up-text"><label for="flip">Enter as collaborator</label></div>
+            </div>
+            </div>
+                        <div class="signup-form">
+          <div class="title">Collaborator Log in</div>
+        <form action="#">
+            <div class="input-boxes">
+          
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="Enter your email" required="">
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Enter your password" required="">
+              </div><div class="text"><a href="#">Forgot password?</a></div>
+                
+              <div class="button input-box">
+                <input type="submit" value="Login" onclick="login()">
+              </div>
+              <div class="text sign-up-text"><label for="flip">Enter as admin</label></div>
+            </div>
+      </form>
+    </div>
+                        
+                        </div>
+                          </div>
+              </div>
+        
         <script src="logScript.js"></script> 
     </body>
-

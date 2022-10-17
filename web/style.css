@@ -19,6 +19,7 @@
 }
 
 
+
 .sidebar {
    width: 345px;
    position: fixed;
@@ -123,6 +124,10 @@ header {
    height: 100px;
    transition: 0.5s;
    width: calc(100% - 50px);
+}
+
+.ola {
+   
 }
 
 #nav-toggle{
