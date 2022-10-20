@@ -5,7 +5,7 @@ function login(){
     if(user=="Suzzanne" && pass== "Holi"){
         window.location="index.html";
     }else{
-        errMsj('Usuario o Contraseña no validos');
+        errMsj('Invalid username or password');
     }
     
 }

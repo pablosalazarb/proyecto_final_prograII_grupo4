@@ -19,6 +19,7 @@
 }
 
 
+
 .sidebar {
    width: 345px;
    position: fixed;
@@ -124,6 +125,8 @@ header {
    transition: 0.5s;
    width: calc(100% - 50px);
 }
+
+
 
 #nav-toggle{
    display: none;
