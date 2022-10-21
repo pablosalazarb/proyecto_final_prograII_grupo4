@@ -1,15 +1,14 @@
 
-const btnAbrirModal=
-document.querySelector("#btn-abrir-modal");
-const btnCerrarModal =
-document.querySelector("#btn-cerrar-modal");
-const modal =
-document.querySelector("#modal");
+function togglePopup(){
+    document.getElementById("popup-1").classList.toggle("active");
 
-btnAbrirModal.addEventListener("click",()=>{
-    modal.show();
+}
+
+document.addEventListener('keydown', function(event){
+	if(event.key === "Escape"){
+document.getElementById("popup-1").classList.toggle("active");
+	}
 })
 
-btnCerrarModal.addEventListener("click",()=>{
-modal.close();
-})
+
+
