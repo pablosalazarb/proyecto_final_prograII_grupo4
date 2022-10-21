@@ -36,7 +36,7 @@ header {
    background-color: white;
    height: auto;
    width: 100%;
-   position: fixed;
+   
    top: 0;
    left: 0;
    display: flex;
@@ -49,7 +49,12 @@ header {
    width: calc(100% - 78px);
    transition: all 0.5s ease;
 
-
+   position: fixed;
+   
+  
+   padding: 6px 14px;
+   z-index: 99;
+   
 
 }
 
@@ -338,11 +343,6 @@ a {
    animation: animate-positive 2s;
 }
 
-@-webkit-keyframes animate-positive {
-   0% {
-      width: 0;
-   }
-}
 
 @keyframes animate-positive {
    0% {
@@ -724,6 +724,14 @@ h2 {
    font-size: 25px;
    font-weight: 500;
    margin: 18px
+}
+
+.sidebar ol{
+   padding-left: 0;
+}
+
+.sidebar ul{
+   padding-left: 0;
 }
 
 @media (max-width: 420px) {
