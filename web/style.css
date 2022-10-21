@@ -739,3 +739,80 @@ h2 {
       display: none;
    }
 }
+
+/*Para la ventana modal*/
+
+
+
+#modal{
+  
+   top: 10px;
+   color: #000;
+   max-width: 50ch;
+   padding: 2rem;
+   left: 100px;
+}
+
+#modal::backdrop{
+
+   background-color: rgba(0, 0, 0, 0.55);
+}
+
+
+button{
+   background-color: var(--main-color);
+  
+   border-radius: 5px;
+   color: white;
+}
+
+/*Para el formulario dentro de la ventana modal*/
+
+.controls1 {
+   width: 110%;
+   background: #ffffff;
+   padding: 10px;
+   border-radius: 10px;
+   margin-bottom: 16px;
+   border: 1px solid #000000;
+   font-family: 'calibri';
+   font-size: 18px;
+   
+   margin: auto;
+   }
+
+   .abs-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50vh;}
+   .form-group{
+       width: 300px;
+   }
+  h1{text-align: center;} 
+
+  .form-register .botons1 {
+   width: 45%;
+background: orangered;
+padding: 5px;
+border-radius: 10px;
+margin-bottom: 16px;
+border: 1px solid #000000;
+font-family: 'calibri';
+font-size: 18px;
+color: rgb(0, 0, 0);
+
+}
+
+.form-register .botons2 {
+   width: 45%;
+background: var(--text-grey);
+padding: 5px;
+border-radius: 10px;
+margin-bottom: 16px;
+border: 1px solid #000000;
+font-family: 'calibri';
+font-size: 18px;
+color: rgb(0, 0, 0);
+
+}
