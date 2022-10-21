@@ -1,3 +1,10 @@
+<%-- 
+    Document   : index
+    Created on : 21/10/2022, 11:56:58 AM
+    Author     : mgeoh
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -86,4 +93,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
               </div>
         
         <script src="logScript.js"></script> 
+        
+
     </body>

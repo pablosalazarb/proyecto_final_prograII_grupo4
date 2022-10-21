@@ -1,9 +1,9 @@
-function login(){
+ function login(){
     var user, pass;
     user = document.getElementById("user").value;
     pass = document.getElementById("pass").value;
     if(user=="Suzzanne" && pass== "Holi"){
-        window.location="index.html";
+        window.location="home.jsp";
     }else{
         errMsj('Invalid username or password');
     }

@@ -1,3 +1,10 @@
+<%-- 
+    Document   : index
+    Created on : 21/10/2022, 11:55:25 AM
+    Author     : mgeoh
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html>
@@ -15,9 +22,13 @@
       <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <link href="style.css" rel="stylesheet" type="text/css"/>
-        <script src="script.js" type="text/javascript"></script>
+        
+ <script src="script.js" type="text/javascript"></script>
+        
     </head>
     <body>
+
+       
         
         <div class="sidebar">
             <div class="logo-details">
@@ -26,11 +37,11 @@
                 <i class='bx bx-menu' id="btn" ></i>
             </div>
             <ul class="nav-list">
-              <li>
-                  <i class='bx bx-search' ></i>
-                 <input type="text" placeholder="Search...">
-                 <span class="tooltip">Search</span>
-              </li>
+                <li>
+                    <i class='bx bx-search' ></i>
+                   <input type="text" placeholder="Search...">
+                   <span class="tooltip">Search</span>
+                </li>
               <li>
                 <a href="#">
                   <i class='bx bx-grid-alt'></i>
@@ -60,12 +71,55 @@
                <span class="tooltip">Analytics</span>
              </li>
              <li>
-               <a href="#">
-                 <i class='bx bx-folder' ></i>
-                 <span class="links_name">File Manager</span>
+               <a href="#" >
+                 <i  class='bx bx-folder' ></i>
+                 <span class="links_name">Project Manager</span>
                </a>
-               <span class="tooltip">Files</span>
+               
+               <span class="tooltip">Projects</span>
              </li>
+
+             <div>
+                <div class="popup" id="popup-1">
+        
+                    <div class="overlay"></div>
+                    <div class="content">
+            
+                    <form class="form-register" method="dialog">
+                        <h1>Add new project</h1>
+                        <br>
+                        
+                    <div class="form-group">
+                      <label>Project tittle</label>
+                      <input type="text" class="controls1" name="" id="" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                      <label class="ola" >Department</label>
+                      <input type="text" class="controls1" name="" id="" >
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <input type="text" class="controls1" name="" id="" >
+                      </div>
+                    <div>
+                
+                        <br>
+                     <button class="botons1" id="btn-cerrar-modal" onclick="togglePopup ()">Close</button>
+                         <button type="submit" class="botons2">Enviar</button>
+                 </div>
+                        </form>
+                </div>
+                </div>
+        
+                
+               </div>
+               
+          
+
+
+
+
+
              <li>
                <a href="#">
                  <i class='bx bx-cart-alt' ></i>
@@ -95,7 +149,7 @@
                      <div class="job">Web designer</div>
                    </div>
                  </div>
-                 <a href="indexLogin.html" >
+                 <a href="index.jsp" >
                     <i class='bx bx-log-out' id="log_out" ></i>
                 
                 </a>
@@ -112,7 +166,7 @@
           </div>
             
    
-   
+       
     
         <div class="main-content">
             
@@ -121,6 +175,9 @@
             Dashboard
        
     </h2>
+                   
+       
+        
 
     <div class="search-wrapper">
     <span class="las la-search"></span>
@@ -134,9 +191,11 @@
 </div>              
     </header>
 
-    
-    
+
 <main>
+    
+ 
+   
 
     <div class="report">
         <h3>Resume</h3>
@@ -192,7 +251,7 @@
         <div class="projects">
             <div class="card"><div class="card-header">
                 <h3>Recent Projects</h3>
-                <button>See all <span class="las la-arrow-right"></span></button>
+                <button onclick="togglePopup()">Add new project <span class="las la-plus"></span></button>
             </div>
             <div class="card-body">
                 

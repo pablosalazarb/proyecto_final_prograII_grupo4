@@ -453,6 +453,8 @@ h2 {
 }
 
 
+
+
 .sidebar {
    position: fixed;
    left: 0;
@@ -468,6 +470,8 @@ h2 {
 .sidebar.open {
    width: 250px;
 }
+
+
 
 .sidebar .logo-details {
    height: 60px;
@@ -560,24 +564,9 @@ h2 {
    display: none;
 }
 
-.sidebar input {
-   font-size: 15px;
-   color: black;
-   font-weight: 400;
-   outline: none;
-   height: 50px;
-   width: 100%;
-   width: 50px;
-   border: none;
-   border-radius: 12px;
-   transition: all 0.5s ease;
-   background: var();
-}
 
-.sidebar.open input {
-   padding: 0 20px 0 50px;
-   width: 100%;
-}
+
+
 
 .sidebar .bx-search {
    position: absolute;
@@ -738,4 +727,161 @@ h2 {
    .sidebar li .tooltip {
       display: none;
    }
+}
+
+/*Para la ventana modal*/
+
+
+
+#modal{
+  
+   top: 10px;
+   color: #000;
+   max-width: 50ch;
+   padding: 2rem;
+   left: 100px;
+}
+
+#modal::backdrop{
+
+   background-color: rgba(0, 0, 0, 0.55);
+}
+
+
+button{
+   background-color: var(--main-color);
+  
+   border-radius: 5px;
+   color: white;
+}
+
+/*Para el formulario dentro de la ventana modal*/
+
+.controls1 {
+   width: 100%;
+   background: #ffffff;
+   padding: 10px;
+   border-radius: 10px;
+   margin-bottom: 16px;
+   border: 1px solid #000000;
+   font-family: 'calibri';
+   font-size: 18px;
+
+   margin: auto;
+   }
+
+   
+  
+
+
+  .form-register {
+   width: 300px;
+   background: #ffffff;
+   padding: 30px;
+   margin: auto;
+   margin-top: 17px;
+   border-radius: 4px;
+   font-family: 'calibri';
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+   }
+   
+
+  .form-register .botons1 {
+   width: 45%;
+background: orangered;
+padding: 5px;
+border-radius: 10px;
+margin-bottom: 16px;
+border: 1px solid #000000;
+font-family: 'calibri';
+font-size: 18px;
+color: rgb(0, 0, 0);
+
+}
+
+.form-register .botons2 {
+   width: 45%;
+background: var(--text-grey);
+padding: 5px;
+border-radius: 10px;
+margin-bottom: 16px;
+border: 1px solid #000000;
+font-family: 'calibri';
+font-size: 18px;
+color: rgb(0, 0, 0);
+
+}
+
+/*Para el formulario efecto oscuro*/
+
+
+
+.popup .overlay {
+   position: fixed;
+   top:0px;
+   left: 0px;
+   width: 100vw;
+   height: 100vh;
+   background: rgba(0,0,0,0.7);
+   z-index: 1;
+   display: none;
+}
+
+.popup .content{
+   position: absolute;
+   top: 10px;
+   left: 900px;
+   transform: translate(-50%,50%) scale(0);
+   line-height: inherit;
+   width: 520px;
+   height: 220px;
+   z-index: 2;
+   text-align: center;
+   margin: auto;
+   padding: 20px;
+   box-sizing: border-box;
+}
+
+
+.popup.active .overlay{
+   display: block;
+}
+
+.popup.active .content{
+   transition: all 300ms ease-in-out;
+   transform: translate(-50%,50%) scale(1);
+}
+
+
+
+.sidebar input {
+   font-size: 15px;
+   color: black;
+   font-weight: 400;
+   outline: none;
+   height: 50px;
+   width: 100%;
+   width: 50px;
+   border: none;
+   border-radius: 12px;
+   transition: all 0.5s ease;
+   background: var();
+}
+
+.sidebar.open input {
+   padding: 0 20px 0 50px;
+   width: 100%;
+}
+
+.sidebar .controls1{
+   width: 100%;
+   background: #ffffff;
+   padding: 10px;
+   border-radius: 10px;
+   margin-bottom: 16px;
+   border: 1px solid #000000;
+   font-family: 'calibri';
+   font-size: 18px;
+
+   margin: auto;
 }
