@@ -7,6 +7,12 @@ Autores: Suzzane Acevedo, Josue Arango, Brayan Martinez, Melvin Henrandez, Juan 
 Fecha de creacion: 22/10/2022
 */
 
+/*
+
+-------------------- INICIAN CONTROLADORES PRINCIPALES --------------------
+
+*/
+
 //Funcion para poder mostrar/esconder contenedores html utilizando el id
 function show_container(id_container){
 	//Mandamos a llamar la funcion del document para obtener contenedor id
