@@ -1,5 +1,3 @@
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -8,18 +6,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
 -->
 
-    <head>
-        <title>Login</title>
-       <meta charset="UTF-8">
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="https://raw.githubusercontent.com/Suzzanne20/ResourceNekoStation/main/chiphd_106075.ico" type="image/x-icon"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" >
-        <link href="static/css/logStyle.css" rel="stylesheet" type="text/css"/>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    </head>
-    <body>
+<head>
+  <title>Login</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/Suzzanne20/ResourceNekoStation/main/chiphd_106075.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" >
+  <link href="static/css/logStyle.css" rel="stylesheet" type="text/css"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
           <div class="container">
               <input type="checkbox" id="flip">
             
@@ -59,7 +57,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
               <div class="text sign-up-text">Don't have an account? <label for="flip">Sing up now</label></div>
             </div>
             </div>
-                        <div class="signup-form">
+                        <div class="signup-form"><!-- Reg. Users -->
           <div class="title">Sing up</div>
         <form action="#">
             <div class="input-boxes">
@@ -76,6 +74,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <input type="password" placeholder="Enter your password" required="">
               </div><div class="text"><a href="#">Forgot password?</a></div>
                 
+              <div class="input-box">
+                <i class="fa-sharp fa-solid fa-user"></i>
+                <select class="form-select" aria-label="type of user">
+                <option selected>type of user</option>
+                <option value="1">Admin</option>
+                <option value="2">Colaborador</option>
+                <option value="3">Cliente</option>
+              </select>
+              </div>
+              
+              
+              
+              
               <div class="button input-box">
                 <input type="submit" value="Submit" onclick="login()">
               </div>
@@ -85,12 +96,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
       </form>
     </div>
                         
-                        </div>
-                          </div>
-              </div>
-        
-        <script src="logScript.js"></script> 
-        
-
-    </body>
-</html>
+    </div>
+    </div>
+  </div>
+  
+<!-- Cargamos todas las funciones/acciones js -->
+<script src="static/js/main.js"></script>
+</body>
