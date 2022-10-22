@@ -11,9 +11,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="https://raw.githubusercontent.com/Suzzanne20/ResourceNekoStation/main/chiphd_106075.ico" type="image/x-icon"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" >
-        <link href="logStyle.css" rel="stylesheet" type="text/css"/>
+        <link href="static/css/logStyle.css" rel="stylesheet" type="text/css"/>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        
     </head>
     <body>
           <div class="container">
@@ -70,27 +72,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
               <div class="input-box">
                 <i class="fas fa-lock"></i>
                 <input type="password" placeholder="Enter your password" required="">
-              </div><div class="text"><a href="#">Forgot password?</a></div>
+              </div>  
                 
               <div class="input-box">
-                <i class="fa-sharp fa-solid fa-user"></i>
-                <select class="form-select" aria-label="type of user">
-                <option selected>type of user</option>
-                <option value="1">Admin</option>
-                <option value="2">Colaborador</option>
-                <option value="3">Cliente</option>
-              </select>
-              </div>
-              
-              
-              
-              
+                <i class="fas fa-user"></i>
+                <div class="col-12"><select class="form-select col-12" aria-label="type of user">
+                    <option selected>type of user</option>
+                    <option value="1">Admin</option>
+                    <option value="2">Colaborador</option>
+                    <option value="3">Cliente</option>
+                    </select></div>
+              </div>  
+                 
               <div class="button input-box">
                 <input type="submit" value="Submit" onclick="login()">
               </div>
            <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
 
-            </div>
+             </div>   
       </form>
     </div>
                         
