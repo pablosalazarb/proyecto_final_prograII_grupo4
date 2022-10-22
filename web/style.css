@@ -886,3 +886,14 @@ color: rgb(0, 0, 0);
    margin: auto;
 }
 
+.seleccion {
+    width: 100%;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #000000;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    }
