@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author JP
+ * @author Pablosalazarbr
  */
 public class Usuario {
     private ConexionBaseDeDatos conectorBD;
@@ -28,20 +28,22 @@ public class Usuario {
     public String validarUsuario(String user, String pass){
         String sql = "SELECT * FROM usuario WHERE usuario = '" + user + "' AND contrasenia = '"+pass+"'";
         try{
-            this.conexion = this.conectorBD.conectar();
-            this.statement = conexion.prepareStatement(sql);
-            this.result=this.statement.executeQuery();
+            this.conexion = this.conectorBD.conectar(); //Abrimos la conexion sql
+            this.statement = conexion.prepareStatement(sql); //Preparamos la consulta a realizar
+            this.result=this.statement.executeQuery(); //Ejcutamos el query sql y recibimos un resultado
+            //Si el resultado NO es nulo, entonces...
             if(result != null){
-                 String usuarioEncontrado="";
+                String usuarioEncontrado=""; //Creamos la variable string del usuario encontrado
+                //Mientras el resultado sea verdadero (en el caso que obtengamos un registro)
                 while (result.next()){
-                    usuarioEncontrado= result.getString("usuario");
+                    usuarioEncontrado= result.getString("usuario"); //Almacenamos el nombre del usuario en la variable usuarioencontrado
                 }
-                return usuarioEncontrado;
+                return usuarioEncontrado; //Devolvemos como resultado la vvariable usuarioencontrado
             }
-            return "Usuario no encontrado";
+            return "Usuario no encontrado"; //Caso contrario devolvemos un texto de usuario no encontrado
         }
         catch(SQLException e){
-           return e.getMessage();
+           return e.getMessage(); //Guardamos el mensaje de error si lo hubiera
         }
     }
 }
