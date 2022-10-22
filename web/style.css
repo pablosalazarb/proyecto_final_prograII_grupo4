@@ -765,9 +765,9 @@ button{
    margin-bottom: 16px;
    border: 1px solid #000000;
    font-family: 'calibri';
-   font-size: 18px;
+   font-size: 9px;
 
-   margin: auto;
+   margin: 0 auto;
    }
 
    
@@ -775,14 +775,15 @@ button{
 
 
   .form-register {
-   width: 300px;
+   
+   width: 750px;
    background: #ffffff;
-   padding: 30px;
-   margin: auto;
+   padding: 50px;
+   margin: 0 auto;
    margin-top: 17px;
    border-radius: 4px;
    font-family: 'calibri';
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    
    }
    
 
@@ -812,9 +813,9 @@ color: rgb(0, 0, 0);
 
 }
 
+
+
 /*Para el formulario efecto oscuro*/
-
-
 
 .popup .overlay {
    position: fixed;
@@ -830,15 +831,15 @@ color: rgb(0, 0, 0);
 .popup .content{
    position: absolute;
    top: 10px;
-   left: 900px;
+   left: 500px;
    transform: translate(-50%,50%) scale(0);
    line-height: inherit;
-   width: 520px;
-   height: 220px;
+   width: 670px;
+   height: 0px;
    z-index: 2;
    text-align: center;
-   margin: auto;
-   padding: 20px;
+   margin: 0 auto;
+   padding: 2px;
    box-sizing: border-box;
 }
 
