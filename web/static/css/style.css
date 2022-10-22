@@ -564,10 +564,6 @@ h2 {
    display: none;
 }
 
-
-
-
-
 .sidebar .bx-search {
    position: absolute;
    top: 50%;
@@ -783,6 +779,8 @@ button{
    margin-top: 17px;
    border-radius: 4px;
    font-family: 'calibri';
+   display: flex;
+   flex-direction: column;
     
    }
    
@@ -815,7 +813,10 @@ color: rgb(0, 0, 0);
 
 
 
+
 /*Para el formulario efecto oscuro*/
+
+
 
 .popup .overlay {
    position: fixed;
@@ -827,7 +828,13 @@ color: rgb(0, 0, 0);
    z-index: 1;
    display: none;
 }
-
+button.close-btn{
+   position: absolute;
+   left: 35;
+   width: 30px;
+   background: var(--main-color);
+}
+ 
 .close-btn{
    position: absolute;
    right: 20px;
@@ -840,9 +847,17 @@ color: rgb(0, 0, 0);
    line-height: 30px;
    text-align: center;
    border-radius: 50%;
-
 }
 
+.close-container{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+   align-items: flex-end;
+   background-color: red;
+   height: 20%;
+}
 
 .popup .content{
    cursor: pointer;
@@ -900,7 +915,6 @@ color: rgb(0, 0, 0);
    border: 1px solid #000000;
    font-family: 'calibri';
    font-size: 18px;
-
    margin: auto;
 }
 
