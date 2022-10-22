@@ -887,6 +887,19 @@ color: rgb(0, 0, 0);
    margin: auto;
 }
 
+<<<<<<< HEAD:web/style.css
+.seleccion {
+    width: 100%;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #000000;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    }
+=======
 
 .seleccion{
 
@@ -902,3 +915,4 @@ font-family: 'calibri';
 font-size: 18px;
 
 }
+>>>>>>> b86b03b1aa730afabd4ac4227fc140e56c8721e2:web/static/css/style.css
