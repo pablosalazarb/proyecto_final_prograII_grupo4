@@ -788,7 +788,7 @@ button{
 
   .form-register .botons1 {
    width: 45%;
-background: orangered;
+background: red;
 padding: 5px;
 border-radius: 10px;
 margin-bottom: 16px;
@@ -801,7 +801,7 @@ color: rgb(0, 0, 0);
 
 .form-register .botons2 {
    width: 45%;
-background: var(--text-grey);
+background: var(--second-color);
 padding: 5px;
 border-radius: 10px;
 margin-bottom: 16px;
@@ -886,3 +886,18 @@ color: rgb(0, 0, 0);
    margin: auto;
 }
 
+
+.seleccion{
+
+   color:black;
+   width:150px;
+   height:45px;
+   border-radius: 10px;
+   width: 100%;
+padding: 10px;
+margin-bottom: 16px;
+border: 1px solid #000000;
+font-family: 'calibri';
+font-size: 18px;
+
+}
