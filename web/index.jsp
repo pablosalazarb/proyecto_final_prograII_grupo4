@@ -1,54 +1,96 @@
-<%-- 
-    Document   : index.jsp
-    Created on : 8/10/2022, 07:49:47 AM
-    Author     : JP
---%>
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-<html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login</title>
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+       <meta charset="UTF-8">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://raw.githubusercontent.com/Suzzanne20/ResourceNekoStation/main/chiphd_106075.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" >
+        <link href="logStyle.css" rel="stylesheet" type="text/css"/>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <link href="css/style.css" rel="stylesheet" type="text/css"/>
-     
-        
     </head>
-    <body>        
-            <br>
-           <div class="container">
-               
-               <c:if test="${success ==0}">
-                  
-                </c:if>
-               
-           
-     
-               
-               
-               <div class="abs-center">
-                
-                <form class="form-register" action="NewServlet" method="POST">
-                <h1>Bienvenido</h1>
-                <br>
-                
-            <div class="form-group">
-              <label for="exampleInputEmail1" >Ingrese usuario</label>
-              <input type="text" class="controls1" name="user" id="user" aria-describedby="emailHelp">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Ingrese su contraseña</label>
-              <input type="password" class="controls1" name="pass" id="pass" ">
-            </div>
+    <body>
+          <div class="container">
+              <input type="checkbox" id="flip">
             
-                 <button type="submit" class="botons">Iniciar Sesion</button>
-          </form>
+    
+                   <div class="cover">
+      <div class="front">
+        <img src="https://st3.depositphotos.com/4678277/35807/i/600/depositphotos_358072788-stock-photo-top-above-high-angle-view.jpg" alt="">
+      
+      </div>
+      <div class="back">
+        <img class="" src="https://purelifi.com/wp-content/uploads/2019/02/AdobeStock_118793641-1320x740.jpeg" alt="">
+        <div class="text">
+          <span class="text-1">Complete miles of journey <br> with one step</span>
+          <span class="text-2">Let's get started</span>
         </div>
-               
+      </div>
+    </div>
+              
+                <div class="forms"> 
+                    <div class="form-content">
+                        <div class="login-form">
+                            
+                            <div class="title">Login</div>
+                    <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" required="required" id="user" placeholder="Enter your email">
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" required="required" id="pass" placeholder="Enter your password">
+              </div>
+              <div class="text"><a href="#">Forgot password?</a></div>
+              <div class="button input-box">
+                <input type="submit" value="Login" onclick="login()">
+              </div>
+              <div class="text sign-up-text">Don't have an account? <label for="flip">Sing up now</label></div>
+            </div>
+            </div>
+                        <div class="signup-form">
+          <div class="title">Sing up</div>
+        <form action="#">
+            <div class="input-boxes">
+            <div class="input-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="Enter your name" required="">
+              </div>
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="Enter your email" required="">
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Enter your password" required="">
+              </div><div class="text"><a href="#">Forgot password?</a></div>
+                
+              <div class="button input-box">
+                <input type="submit" value="Submit" onclick="login()">
+              </div>
+           <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+
+            </div>
+      </form>
+    </div>
+                        
+                        </div>
+                          </div>
+              </div>
+        
+        <script src="logScript.js"></script> 
+        
+
     </body>
 </html>
