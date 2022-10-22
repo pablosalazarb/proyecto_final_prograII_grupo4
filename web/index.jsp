@@ -63,7 +63,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             <div class="input-boxes">
             <div class="input-box">
                 <i class="fa fa-user"></i>
-                <input type="text" placeholder="Enter your name" required="">
+                <input type="text" placeholder="Enter your name" required="" id="user">
               </div>
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
@@ -71,28 +71,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required="">
-              </div><div class="text"><a href="#">Forgot password?</a></div>
+                <input type="password" placeholder="Enter your password" required="" id="pass">
+              </div>  
                 
               <div class="input-box">
-                <i class="fa-sharp fa-solid fa-user"></i>
-                <select class="form-select" aria-label="type of user">
-                <option selected>type of user</option>
-                <option value="1">Admin</option>
-                <option value="2">Colaborador</option>
-                <option value="3">Cliente</option>
-              </select>
-              </div>
-              
-              
-              
-              
+                <i class="fas fa-user"></i>
+                <div class="col-12"><select class="form-select col-12" aria-label="type of user" id="tyuser">
+                    <option selected>type of user</option>
+                    <option value="1">Admin</option>
+                    <option value="2">Colaborador</option>
+                    <option value="3">Cliente</option>
+                    </select></div>
+              </div>  
+                 
               <div class="button input-box">
                 <input type="submit" value="Submit" onclick="login()">
               </div>
            <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
 
-            </div>
+             </div>   
       </form>
     </div>
                         
