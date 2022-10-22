@@ -783,6 +783,8 @@ button{
    margin-top: 17px;
    border-radius: 4px;
    font-family: 'calibri';
+   display: flex;
+   flex-direction: column;
     
    }
    
@@ -815,7 +817,10 @@ color: rgb(0, 0, 0);
 
 
 
+
 /*Para el formulario efecto oscuro*/
+
+
 
 .popup .overlay {
    position: fixed;
@@ -828,18 +833,48 @@ color: rgb(0, 0, 0);
    display: none;
 }
 
+button.close-btn{
+   position: absolute;
+   
+   left: 35;
+   width: 30px;
+   background: var(--main-color);
+   color: #fff;
+   font-size: 25px;
+   font-weight: 600;
+   line-height: 30px;
+   text-align: center;
+   border-radius: 50%;
+   
+
+}
+
+.close-container{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+   align-items: flex-end;
+   background-color: red;
+   height: 20%;
+
+}
+
+
 .popup .content{
+   cursor: pointer;
    position: absolute;
    top: 10px;
    left: 500px;
    transform: translate(-50%,50%) scale(0);
+ 
    line-height: inherit;
-   width: 670px;
-   height: 0px;
+   width: 520px;
+   height: 220px;
    z-index: 2;
    text-align: center;
-   margin: 0 auto;
-   padding: 2px;
+   margin: auto;
+   padding: 20px;
    box-sizing: border-box;
 }
 
@@ -852,7 +887,6 @@ color: rgb(0, 0, 0);
    transition: all 300ms ease-in-out;
    transform: translate(-50%,50%) scale(1);
 }
-
 
 
 .sidebar input {
@@ -887,7 +921,6 @@ color: rgb(0, 0, 0);
    margin: auto;
 }
 
-<<<<<<< HEAD:web/style.css
 .seleccion {
     width: 100%;
     background: #ffffff;
@@ -899,20 +932,3 @@ color: rgb(0, 0, 0);
     font-size: 18px;
     color: rgb(0, 0, 0);
     }
-=======
-
-.seleccion{
-
-   color:black;
-   width:150px;
-   height:45px;
-   border-radius: 10px;
-   width: 100%;
-padding: 10px;
-margin-bottom: 16px;
-border: 1px solid #000000;
-font-family: 'calibri';
-font-size: 18px;
-
-}
->>>>>>> b86b03b1aa730afabd4ac4227fc140e56c8721e2:web/static/css/style.css
