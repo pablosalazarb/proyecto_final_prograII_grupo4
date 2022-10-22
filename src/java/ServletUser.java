@@ -1,9 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -13,16 +11,19 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 /**
- *
- * @author Pablosalazarbr
+ * @author Suzzanne Acevedo
  */
-@WebServlet(urlPatterns = {"/AlumnoController"})
-public class AlumnoController extends HttpServlet {
+@WebServlet(urlPatterns = {"/ServletUser"})
+public class ServletUser extends HttpServlet {
+    
+    UsuarioModell usuarios;
+    UsuarioVec regUsr;
+    UsuarioModell[] registruser;
+    StringBuffer objOut = new StringBuffer();
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
-     *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
@@ -31,18 +32,32 @@ public class AlumnoController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-           if(request.getSession().getAttribute("user")==null){
-               //response.sendRedirect(request.getContextPath()+"/index.jsp");
-               request.setAttribute("success", 0);
-                request.getRequestDispatcher("/index.jsp").forward(request, response);
-           }else{
-               request.setAttribute("UsuarioLogueado", request.getSession().getAttribute("user"));
-               request.getRequestDispatcher("home.jsp").forward(request, response);
-           }
-           
+        try ( PrintWriter out = response.getWriter()) {
+            
+            regUsr=new UsuarioVec();
+            
+            String control = request.getParameter("control");
+            
+            if(control.toUpperCase().equals("GUARDAR")){
+            usuarios=new UsuarioModell(
+            request.getParameter("user"),
+            request.getParameter("pass"),
+            request.getParameter("tipUsr"));
+            
+            regUsr.saveUsr(usuarios);
+            }else if (control.toUpperCase().equals("ELIMINAR")){
+             int codDelete = Integer.parseInt(request.getParameter("id"));
+             regUsr.eliminaruserBd(codDelete);
+            }
+
+        if(regUsr.saveuserBD(usuarios)){out.println(1);}else{out.println(0);}
+        regUsr.bdView(objOut);
+        out.write(objOut.toString());
+
         }
+             
     }
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

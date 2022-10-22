@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`usuario` (
   `password` VARCHAR(25) NOT NULL,
   `rol_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_usuario_rol_idx` (`rol_id` ASC) VISIBLE,
+  INDEX `fk_usuario_rol_idx` (`rol_id` ASC) ,
   CONSTRAINT `fk_usuario_rol`
     FOREIGN KEY (`rol_id`)
     REFERENCES `mydb`.`rol` (`id`)
@@ -78,9 +78,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`proyecto` (
   `estado_id` INT NOT NULL,
   `categoria_proyecto_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_proyecto_usuario1_idx` (`usuario_id` ASC) VISIBLE,
-  INDEX `fk_proyecto_estado1_idx` (`estado_id` ASC) VISIBLE,
-  INDEX `fk_proyecto_categoria_proyecto1_idx` (`categoria_proyecto_id` ASC) VISIBLE,
+  INDEX `fk_proyecto_usuario1_idx` (`usuario_id` ASC) ,
+  INDEX `fk_proyecto_estado1_idx` (`estado_id` ASC) ,
+  INDEX `fk_proyecto_categoria_proyecto1_idx` (`categoria_proyecto_id` ASC) ,
   CONSTRAINT `fk_proyecto_usuario1`
     FOREIGN KEY (`usuario_id`)
     REFERENCES `mydb`.`usuario` (`id`)
@@ -107,8 +107,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`asignacion_colaborador` (
   `usuario_id` INT NOT NULL,
   `proyecto_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_asignacion_colaborador_usuario1_idx` (`usuario_id` ASC) VISIBLE,
-  INDEX `fk_asignacion_colaborador_proyecto1_idx` (`proyecto_id` ASC) VISIBLE,
+  INDEX `fk_asignacion_colaborador_usuario1_idx` (`usuario_id` ASC) ,
+  INDEX `fk_asignacion_colaborador_proyecto1_idx` (`proyecto_id` ASC) ,
   CONSTRAINT `fk_asignacion_colaborador_usuario1`
     FOREIGN KEY (`usuario_id`)
     REFERENCES `mydb`.`usuario` (`id`)
@@ -141,8 +141,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`asignacion_recurso` (
   `proyecto_id` INT NOT NULL,
   `contenido` VARCHAR(45) NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_asignacion_recurso_recurso1_idx` (`recurso_id` ASC) VISIBLE,
-  INDEX `fk_asignacion_recurso_proyecto1_idx` (`proyecto_id` ASC) VISIBLE,
+  INDEX `fk_asignacion_recurso_recurso1_idx` (`recurso_id` ASC) ,
+  INDEX `fk_asignacion_recurso_proyecto1_idx` (`proyecto_id` ASC) ,
   CONSTRAINT `fk_asignacion_recurso_recurso1`
     FOREIGN KEY (`recurso_id`)
     REFERENCES `mydb`.`recurso` (`id`)
