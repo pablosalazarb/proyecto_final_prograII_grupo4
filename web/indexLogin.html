@@ -55,7 +55,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
               <div class="text sign-up-text">Don't have an account? <label for="flip">Sing up now</label></div>
             </div>
             </div>
-                        <div class="signup-form">
+                        <div class="signup-form"><!-- Reg. Users -->
           <div class="title">Sing up</div>
         <form action="#">
             <div class="input-boxes">
@@ -72,6 +72,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <input type="password" placeholder="Enter your password" required="">
               </div><div class="text"><a href="#">Forgot password?</a></div>
                 
+              <div class="input-box">
+                <i class="fa-sharp fa-solid fa-user"></i>
+                <select class="form-select" aria-label="type of user">
+                <option selected>type of user</option>
+                <option value="1">Admin</option>
+                <option value="2">Colaborador</option>
+                <option value="3">Cliente</option>
+              </select>
+              </div>
+              
+              
+              
+              
               <div class="button input-box">
                 <input type="submit" value="Submit" onclick="login()">
               </div>
