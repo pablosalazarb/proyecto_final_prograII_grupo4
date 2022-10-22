@@ -22,7 +22,10 @@
     <body>        
             <br>
            <div class="container">
-            
+            <c:if test="${success==0}">
+                    <div class="alert alert-danger" id="error">${mensaje}</div>
+                   
+                </c:if>
                <div class="abs-center">
                 
                 <form class="form-register" action="NewServlet" method="POST">
