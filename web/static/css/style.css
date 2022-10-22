@@ -887,7 +887,6 @@ color: rgb(0, 0, 0);
    margin: auto;
 }
 
-<<<<<<< HEAD:web/style.css
 .seleccion {
     width: 100%;
     background: #ffffff;
@@ -899,20 +898,3 @@ color: rgb(0, 0, 0);
     font-size: 18px;
     color: rgb(0, 0, 0);
     }
-=======
-
-.seleccion{
-
-   color:black;
-   width:150px;
-   height:45px;
-   border-radius: 10px;
-   width: 100%;
-padding: 10px;
-margin-bottom: 16px;
-border: 1px solid #000000;
-font-family: 'calibri';
-font-size: 18px;
-
-}
->>>>>>> b86b03b1aa730afabd4ac4227fc140e56c8721e2:web/static/css/style.css
