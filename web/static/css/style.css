@@ -861,7 +861,7 @@ button.close-btn{
    cursor: pointer;
    position: absolute;
    top: 10px;
-   left: 500px;
+   left: 560px;
    transform: translate(-50%,50%) scale(0);
 
    line-height: inherit;
