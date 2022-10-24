@@ -15,6 +15,8 @@
    --shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
    --porcentage:var(--main-color);
    --background-color: white;
+   --gradient: linear-gradient(135deg, #71b7e6, #9b59b6);
+   --gradient2:linear-gradient(-135deg, #71b7e6, #9b59b6);
    
 
 }
@@ -29,8 +31,8 @@ body{
 /*Color cuando se pone oscuro*/
 
 body.dark{
-   --main-color: 
-   #485262;
+   --main-color: #485262;
+   
      --color-dark: white;
        --primary-color:  #19253a;
        --shadow: 3px 3px 10px ;
@@ -42,9 +44,14 @@ body.dark{
        --status-progress: #db504a;
        --status-pending: #56c6c0;
        --background-color:#19253a ;
+       --gradient: linear-gradient(135deg, #7c3cf3, #485262);
+       --gradient2:linear-gradient(-135deg, #7c3cf3, #485262);
        
 }
 
+small{
+   color: var(--text-grey);
+}
 .nocolor{
    color: none;
 }
@@ -1019,7 +1026,7 @@ button.close-btn{
    
    padding: 25px 30px;
    border-radius: 5px;
-   box-shadow: var(--sh);
+   box-shadow: var(--shadow);
  }
  .container .title{
    font-size: 25px;
@@ -1034,7 +1041,7 @@ button.close-btn{
    height: 3px;
    width: 30px;
    border-radius: 5px;
-   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+   background: var(--gradient);
  }
  .content form .user-details{
    display: flex;
@@ -1114,11 +1121,11 @@ button.close-btn{
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    background: var(--gradient);
   }
   form .button input:hover{
    /* transform: scale(0.99); */
-   background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+   background: var(--gradient2);
    }
   @media(max-width: 584px){
   .container{
