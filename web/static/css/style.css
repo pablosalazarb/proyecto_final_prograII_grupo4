@@ -14,7 +14,16 @@
    --boton-color: none;
    --shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
    --porcentage:var(--main-color);
+   --background-color: white;
+   
 
+}
+
+
+ 
+
+body{
+   background-color: var(--background-color);
 }
 
 /*Color cuando se pone oscuro*/
@@ -32,9 +41,13 @@ body.dark{
        --status-review: #646aea;
        --status-progress: #db504a;
        --status-pending: #56c6c0;
+       --background-color:#19253a ;
        
 }
 
+.nocolor{
+   color: none;
+}
 .report h3{
    color: var(--color-dark);
 }
@@ -43,6 +56,9 @@ h3{
    color: black;
 }
 
+.h5login{
+   color: var(--background-color);
+ }
 
 span{
    color: var(--text-grey);
@@ -1000,10 +1016,10 @@ button.close-btn{
 .container{
    max-width: 700px;
    width: 100%;
-   background-color: #fff;
+   
    padding: 25px 30px;
    border-radius: 5px;
-   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+   box-shadow: var(--sh);
  }
  .container .title{
    font-size: 25px;
