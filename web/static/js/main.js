@@ -1,3 +1,5 @@
+
+
 /*
 Universidad Mariano Galvez de Guatemala
 Archivos de controlador para el frontend implementando JS
@@ -104,7 +106,9 @@ function susMsj(msj){
 
 /*
 
--------------------- Para iniciar el modo oscuro--------------------
+-------------------- Para el menu desplegable--------------------
 
 */
+
+
 

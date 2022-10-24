@@ -7,25 +7,41 @@
    --text-grey: #8390A2;
    --second-color: #9B65FE;
    --primary-color: white;
+   --status-review: rebeccapurple;
+   --status-progress: deeppink;
+   --status-pending: red;
    --search-color: none;
    --boton-color: none;
+   --shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+   --porcentage:var(--main-color);
 
 }
 
 /*Color cuando se pone oscuro*/
 
 body.dark{
-   --main-color: black;
+   --main-color: 
+   #485262;
      --color-dark: white;
-       --primary-color: black;
-
+       --primary-color:  #19253a;
+       --shadow: 3px 3px 10px ;
        --color-dark: white;
        --text-grey: black;
        --second-color: grey;
-       
+       --porcentage:  #696ffb;
+       --status-review: #646aea;
+       --status-progress: #db504a;
+       --status-pending: #56c6c0;
        
 }
 
+.report h3{
+   color: var(--color-dark);
+}
+
+h3{
+   color: black;
+}
 
 
 span{
@@ -73,7 +89,7 @@ header {
    justify-content: space-between;
    align-items: center;
    padding: 1rem 1.5rem;
-   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+   box-shadow: var(--shadow);
    top: 0;
    left: 78px;
    width: calc(100% - 78px);
@@ -87,6 +103,9 @@ header {
    
 
 }
+
+
+/*Menu lateral*/
 
 
 
@@ -161,9 +180,10 @@ header h2 label {
 }
 
 main {
+
    margin-top: 90px;
    padding: 2rem 1.5rem;
-   background: #f9f9f9;
+   background: var(--primary-color);
    min-height: calc(100vh - 90px);
 }
 
@@ -243,7 +263,7 @@ main {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   border-bottom: 1px solid #f9f9f9;
+   
    font-size: 30px;
 
 }
@@ -298,15 +318,15 @@ tr td:last-child {
 }
 
 .status.purple {
-   background: rebeccapurple;
+   background: var(--status-review);
 }
 
 .status.pink {
-   background: deeppink;
+   background: var(--status-progress);
 }
 
 .status.orange {
-   background: orangered;
+   background: var(--status-pending);
 }
 
 .table-responsive {
@@ -357,6 +377,10 @@ a {
    text-decoration: none !important;
 }
 
+
+/*Barras de progreso de entrega de proyectos*/
+
+
 .progress-tittle {
    width: 100%;
    height: auto;
@@ -389,6 +413,10 @@ a {
 .clase {
    padding-left: 0rem;
 }
+
+
+/*Grafico circular*/
+
 
 .container2 {
    width: 370px;
@@ -441,7 +469,7 @@ h2 {
 
 .mask .fill {
    clip: rect(0, 75px, 150px, 0);
-   background: #7c3cf3;
+   background: var(--porcentage);
 }
 
 .mask.full,
@@ -488,6 +516,9 @@ h2 {
 
 }
 
+
+
+/*Menu desplegable dinamico*/
 
 
 
@@ -1129,7 +1160,7 @@ button.close-btn{
    left: 0;
    right: unset;
    border-radius: 100px;
-   transition: .3s ease all;
+   
    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -1153,6 +1184,7 @@ button.close-btn{
 
 .switch:active::after{
    right: 0;
+   
    left: unset;
 }
 
