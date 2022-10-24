@@ -101,3 +101,10 @@ function susMsj(msj){
   timer: 1500
 })
 }
+
+/*
+
+-------------------- Para iniciar el modo oscuro--------------------
+
+*/
+
