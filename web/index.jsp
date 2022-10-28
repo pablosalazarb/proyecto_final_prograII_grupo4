@@ -7,7 +7,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 -->
 
 <head>
-  <title>Login</title>
+  <title>Bienvenido</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -98,5 +98,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
   </div>
   
 <!-- Cargamos todas las funciones/acciones js -->
-<script src="static/js/main.js"></script>
+<script src="static/js/login.js"></script>
 </body>

@@ -14,9 +14,9 @@ import java.sql.SQLException;
  * @author Pablosalazarbr
  */
 public class ConexionBaseDeDatos {
-    private String url="jdbc:mysql://127.0.0.1:3306/universidad";//url de MySQL
+    private String url="jdbc:mysql://127.0.0.1:3307/mydb";//url de MySQL
     private String usuario="root"; // usuario de mysql local
-    private String clave="root"; //Password del usuario mysql
+    private String clave="1234"; //Password del usuario mysql
     private Connection conexion=null; //Seteamos una variable para validar el estado de conexion, inicialmente null
     
     //Funcion para intentar una conexion a la bd
