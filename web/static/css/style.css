@@ -6,8 +6,77 @@
    --color-dark: #1D2231;
    --text-grey: #8390A2;
    --second-color: #9B65FE;
+   --primary-color: white;
+   --status-review: rebeccapurple;
+   --status-progress: deeppink;
+   --status-pending: red;
+   --search-color: none;
+   --boton-color: none;
+   --shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+   --porcentage:var(--main-color);
+   --background-color: white;
+   --gradient: linear-gradient(135deg, #71b7e6, #9b59b6);
+   --gradient2:linear-gradient(-135deg, #71b7e6, #9b59b6);
+   
 
 }
+
+
+ 
+
+body{
+   background-color: var(--background-color);
+}
+
+/*Color cuando se pone oscuro*/
+
+body.dark{
+   --main-color: #485262;
+   
+     --color-dark: white;
+       --primary-color:  #19253a;
+       --shadow: 3px 3px 10px ;
+       --color-dark: white;
+       --text-grey: black;
+       --second-color: grey;
+       --porcentage:  #696ffb;
+       --status-review: #646aea;
+       --status-progress: #db504a;
+       --status-pending: #56c6c0;
+       --background-color:#19253a ;
+       --gradient: linear-gradient(135deg, #7c3cf3, #485262);
+       --gradient2:linear-gradient(-135deg, #7c3cf3, #485262);
+       
+}
+
+small{
+   color: var(--text-grey);
+}
+.nocolor{
+   color: none;
+}
+.report h3{
+   color: var(--color-dark);
+}
+
+h3{
+   color: black;
+}
+
+.h5login{
+   color: var(--background-color);
+ }
+
+span{
+   color: var(--text-grey);
+}
+
+main.dark{
+   background: var(--color-dark);
+   color: #000;
+}
+
+
 
 * {
    padding: 0;
@@ -21,7 +90,7 @@
 
 .main-content {
    position: relative;
-   background: #E4E9F7;
+   background: var(--primary-color);
    min-height: 100vh;
    top: 0;
    left: 78px;
@@ -33,17 +102,17 @@
 
 header {
 
-   background-color: white;
+   background-color: var(--primary-color);
    height: auto;
    width: 100%;
-   
+   color: var(--color-dark);
    top: 0;
    left: 0;
    display: flex;
    justify-content: space-between;
    align-items: center;
    padding: 1rem 1.5rem;
-   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+   box-shadow: var(--shadow);
    top: 0;
    left: 78px;
    width: calc(100% - 78px);
@@ -59,6 +128,9 @@ header {
 }
 
 
+/*Menu lateral*/
+
+
 
 #nav-toggle {
    display: none;
@@ -66,10 +138,15 @@ header {
 
 header h2 {
    color: black;
+   color: var(--color-dark);
+}
+
+header small{
+   color: var(--text-grey)
 }
 
 header h2 label {
-
+   color: var(--color-dark);
    display: inline-block;
    background: var(--main-color);
    padding-left: 0rem;
@@ -77,7 +154,7 @@ header h2 label {
    height: 40px;
    width: 40px;
    border-radius: 50%;
-   color: #fff;
+  
    display: flex;
    align-items: center;
    justify-content: center !important;
@@ -91,6 +168,7 @@ header h2 label {
    display: flex;
    align-items: center;
    overflow-x: hidden;
+   color: var(--search-color);
 }
 
 .search-wrapper input {
@@ -125,9 +203,10 @@ header h2 label {
 }
 
 main {
+
    margin-top: 90px;
    padding: 2rem 1.5rem;
-   background: #f9f9f9;
+   background: var(--primary-color);
    min-height: calc(100vh - 90px);
 }
 
@@ -207,7 +286,7 @@ main {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   border-bottom: 1px solid #f9f9f9;
+   
    font-size: 30px;
 
 }
@@ -262,15 +341,15 @@ tr td:last-child {
 }
 
 .status.purple {
-   background: rebeccapurple;
+   background: var(--status-review);
 }
 
 .status.pink {
-   background: deeppink;
+   background: var(--status-progress);
 }
 
 .status.orange {
-   background: orangered;
+   background: var(--status-pending);
 }
 
 .table-responsive {
@@ -321,6 +400,10 @@ a {
    text-decoration: none !important;
 }
 
+
+/*Barras de progreso de entrega de proyectos*/
+
+
 .progress-tittle {
    width: 100%;
    height: auto;
@@ -353,6 +436,10 @@ a {
 .clase {
    padding-left: 0rem;
 }
+
+
+/*Grafico circular*/
+
 
 .container2 {
    width: 370px;
@@ -405,7 +492,7 @@ h2 {
 
 .mask .fill {
    clip: rect(0, 75px, 150px, 0);
-   background: #7c3cf3;
+   background: var(--porcentage);
 }
 
 .mask.full,
@@ -452,6 +539,9 @@ h2 {
 
 }
 
+
+
+/*Menu desplegable dinamico*/
 
 
 
@@ -861,7 +951,7 @@ button.close-btn{
    cursor: pointer;
    position: absolute;
    top: 10px;
-   left: 500px;
+   left: 560px;
    transform: translate(-50%,50%) scale(0);
 
    line-height: inherit;
@@ -933,10 +1023,10 @@ button.close-btn{
 .container{
    max-width: 700px;
    width: 100%;
-   background-color: #fff;
+   
    padding: 25px 30px;
    border-radius: 5px;
-   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+   box-shadow: var(--shadow);
  }
  .container .title{
    font-size: 25px;
@@ -951,7 +1041,7 @@ button.close-btn{
    height: 3px;
    width: 30px;
    border-radius: 5px;
-   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+   background: var(--gradient);
  }
  .content form .user-details{
    display: flex;
@@ -1031,11 +1121,11 @@ button.close-btn{
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    background: var(--gradient);
   }
   form .button input:hover{
    /* transform: scale(0.99); */
-   background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+   background: var(--gradient2);
    }
   @media(max-width: 584px){
   .container{
@@ -1062,3 +1152,62 @@ button.close-btn{
      flex-direction: column;
    }
  }
+
+ 
+/* Para el boton de modo oscuro*/
+
+
+
+.switch{
+   background: #343D5B;
+   border-radius: 1000px;
+   border: none;
+   position: relative;
+   cursor: pointer;
+   display: flex;
+   outline: none;
+   top: -2rem;
+
+   left: 80px;
+ 
+}
+
+.switch::after {
+   content: "";
+   display: block;
+   width: 30px;
+   height: 30px;
+   position: absolute;
+   background: #F1F1F1;
+   top: 0;
+   left: 0;
+   right: unset;
+   border-radius: 100px;
+   
+   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.switch span{
+
+   width: 30px;
+   height: 30px;
+   line-height: 30px;
+   display: block;
+   background: none;
+   color: #fff;
+
+}
+
+.switch:active{
+   background: orange;
+   color: #000;
+  
+}
+
+.switch:active::after{
+   right: 0;
+   
+   left: unset;
+}
+

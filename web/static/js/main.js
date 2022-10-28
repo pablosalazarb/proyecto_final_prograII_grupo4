@@ -1,3 +1,5 @@
+
+
 /*
 Universidad Mariano Galvez de Guatemala
 Archivos de controlador para el frontend implementando JS
@@ -100,4 +102,59 @@ function susMsj(msj){
   showConfirmButton: false,
   timer: 1500
 })
+}
+
+/*
+
+-------------------- Para el modo oscuro--------------------
+
+*/
+
+
+const btnSwitch = document.querySelector('#switch');
+btnSwitch.addEventListener('click', () =>
+{
+  document.body.classList.toggle('dark');
+  btnSwitch.classList.toggle('active');
+
+if(document.body.classList.contains('dark')){
+  localStorage.setItem('dark-mode', 'true');
+} else {
+  localStorage.setItem('dark-mode', 'false');
+}
+
+});
+
+if(localStorage.getItem('dark-mode')== 'true'){
+  document.body.classList.toggle('dark'); 
+  btnSwitch.classList.add('active');
+} else{
+  document.body.classList.remove('dark'); 
+  btnSwitch.classList.remove('active');
+}
+
+
+/*-----------------Para el menu desplegable-----------------*/
+
+let sidebar = document.querySelector(".sidebar");
+let closeBtn = document.querySelector("#btn");
+let searchBtn = document.querySelector(".bx-search");
+
+closeBtn.addEventListener("click", ()=>{
+  sidebar.classList.toggle("open");
+  menuBtnChange();//calling the function(optional)
+});
+
+searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+  sidebar.classList.toggle("open");
+  menuBtnChange(); //calling the function(optional)
+});
+
+// following are the code to change sidebar button(optional)
+function menuBtnChange() {
+ if(sidebar.classList.contains("open")){
+   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+ }else {
+   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+ }
 }
