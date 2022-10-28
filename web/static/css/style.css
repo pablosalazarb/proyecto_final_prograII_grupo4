@@ -17,6 +17,7 @@
    --background-color: white;
    --gradient: linear-gradient(135deg, #71b7e6, #9b59b6);
    --gradient2:linear-gradient(-135deg, #71b7e6, #9b59b6);
+  
    
 
 }
@@ -47,6 +48,10 @@ body.dark{
        --gradient: linear-gradient(135deg, #7c3cf3, #485262);
        --gradient2:linear-gradient(-135deg, #7c3cf3, #485262);
        
+}
+
+.specialh4{
+    color: var(--background-color);
 }
 
 small{
