@@ -42,13 +42,13 @@ public class ServletProject extends HttpServlet {
             
             if(control.toUpperCase().equals("GUARDAR")){
             proyecto=new ProyectoModell(
-            Integer.parseInt(request.getParameter("cod")),
-            request.getParameter("name"),
-            request.getParameter("loc"),
-            request.getParameter("mail"),
-            Integer.parseInt(request.getParameter("cod")),
-            Integer.parseInt(request.getParameter("cod")),        
-            request.getParameter("tel"));
+            Integer.parseInt(request.getParameter("idp")),
+            request.getParameter("project"),
+            request.getParameter("description"),
+            request.getParameter("date"),
+            Integer.parseInt(request.getParameter("manager")),
+            Integer.parseInt(request.getParameter("estatus")),        
+            request.getParameter("category"));
             
             regProyecto.savePro(proyecto);
             }else if (control.toUpperCase().equals("ELIMINAR")){
