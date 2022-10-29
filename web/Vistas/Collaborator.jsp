@@ -1,34 +1,29 @@
 <%-- 
-    Document   : home
-    Created on : 22-oct-2022, 9:11:42
+    Document   : Collaborator.jsp
+    Created on : 28-oct-2022, 18:37:31
     Author     : susan
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-    <head> 
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>DASHBOARD</title>
-        
-        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-        <meta name="viewport cont" content="width=device-width, initial-scale=1,maximum-">        
-        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        <link href="static/css/style.css" rel="stylesheet" type="text/css"/>
-    </head> 
-     
+    <head>
+    <title>Dashboard/Collaborator</title>
+    <meta charset="UTF-8">
+    <!-- CSS-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport cont" content="width=device-width, initial-scale=1,maximum-">        
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="../../../web/static/css/style.css" rel="stylesheet" type="text/css"/>
+    <!-- Java-->
+    <script src="https://kit.fontawesome.com/0539a5873a.js" crossorigin="anonymous"></script>
     
-    <% 
-        response.setHeader("Cache-Control", "nocache, no-store, must-revalidate");
-        if(session.getAttribute("mail")==null){
-            response.sendRedirect("/index.jsp");
-        }
-    %>
+  </head>
+  <!-- Body-->
+  <body>   
+
     
-        
-  <body>      
-  
     <!--Menu desplegable-->
         <div class="sidebar">
             <div class="logo-details">
@@ -206,7 +201,8 @@
                    <!--<img src="profile.jpg" alt="profileImg">-->
                    
                  </div>
-                 <a href="Logout">Logout - ${UsuarioLogueado}<!------------ CERRAR SESION ------------>
+
+                     <a href="../../../web/indexLogin.html">
                     <i  class='bx bx-log-out' id="log_out" ></i>
                     <div class="name_job">
                       <div class="name">Softech</div>
@@ -231,19 +227,17 @@
             <header>
                <h2>
             Dashboard
-            <a href="Vistas/cliente.jsp">Cliente</a>
-            <a href="Vistas/Collaborator.jsp">Collaborator</a>
-            <a href="Vistas/Projects.jsp">Projects</a>
+            
     </h2>
                    
     
 
 <div class="user-wrapper">
-    <img src="https://scontent.fgua3-3.fna.fbcdn.net/v/t39.30808-6/307746927_5837900749563170_2039318999615401823_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=fsa40JXMVEkAX-jqw_Y&_nc_ht=scontent.fgua3-3.fna&oh=00_AfDg1xGMYuM1KC94JSaFPPmoW9pf5jnwafLzsJY2W4jdFQ&oe=63611EB2" width="40" height="40" alt="">
-<div><h4>Pablo Salazar</h4>
+    <img src="https://www.bristol.ac.uk/media-library/sites/tel/images/icons8-collaborator-male-256%20(1).png" width="40" height="40" alt="">
+<div><h4>Collaborator</h4>
 
 
-  <h5>Admin</h5>
+  <h5>Desig</h5>
 <button  class="switch" id="switch">
   
   <span><i class="fa-solid fa-sun"></i></span>
@@ -267,7 +261,7 @@
 
     <div class="report">
         <h3>Resume</h3>
-        <button><i class="fa-solid fa-download"></i> Generate Report </button>
+     
     </div>
 
     <div class="cards">
@@ -425,7 +419,7 @@
         <div class="customers">
             <div class="card"><div class="card-header">
                 <h3>Team members</h3>
-                <button onclick="togglePopup2()">Add member <i class="fa-solid fa-plus"></i></button>
+            
             </div>
 
             <div class="card-body">
@@ -505,33 +499,13 @@
                 </div>
                 </div>
         </div>
-        <div class="container2">
-            <h2>Progress report</h2>
-            <div class="progress-container2">
-                <div class="progress2">
-                    <div class="mask full">
-                        <div class="fill"></div>
-                    </div>
-                </div>
-                <div class="mask half">
-                    <div class="fill"></div>
-                </div>
-                <div class="inside-circle">30 <span>%</span></div>
-            </div>
-
-            <div class="line"></div>
-            <div class="progress2-report">
-                <h3>0% <br> <span>Last Week</span></h3>
-                <div class="line"></div>
-                <h3>30% <br> <span>This Week</span></h3>
-            </div>
+     
             
-            </div>
-            </div>
-        
-          </div>
+
+<!--JavaScript-->
 
 
-  <script src="static/js/main.js" type="text/javascript"></script>
+<script src="../../../web/static/js/main.js" type="text/javascript"></script>
+
     </body>
 </html>

@@ -1,11 +1,9 @@
-
-
 /*
 Universidad Mariano Galvez de Guatemala
 Archivos de controlador para el frontend implementando JS
 Proyecto Final de Programacion II
 Grupo 4
-Autores: Suzzane Acevedo, Josue Arango, Brayan Martinez, Melvin Henrandez, Juan P. Salazar
+Autores: Suzzanne Acevedo, Josue Arango, Brayan Martinez, Melvin Henrandez, Juan P. Salazar
 Fecha de creacion: 22/10/2022
 */
 
@@ -53,26 +51,8 @@ function togglePopup2(){
 
 */
 
-function login(){
-    var user, pass;
-    user = document.getElementById("user").value;
-    pass = document.getElementById("pass").value;
-    if(user=="Suzzanne" && pass== "Holi"){
-        window.location="index.html";
-    }else{
-        errMsj('Invalid username or password');
-    }
-    
-}
 
-function errMsj(msj){
-  Swal.fire({
-  icon: 'error',
-  title: msj,
-  showConfirmButton: false,
-  timer: 1500
-})
-}
+
 function comeDom (){
     let usuarios = new Object();
     let user=document.getElementById("user");
@@ -83,9 +63,9 @@ function comeDom (){
     usuarios.tipUsr=tipUsr.value;
 }
 
-function sendData2(){
+function sendData(){
 	const XHR = new XMLHttpRequest();
-	  var formData = new URLSearchParams(new FormData(document.getElementById('formuser'))).toString();
+	  var formData = new URLSearchParams(new FormData(document.getElementById('form'))).toString();
 	  XHR.addEventListener('error',(event) => {alert('Oops! ah ocurrido un error (T_T)');});
 	  XHR.open('POST', 'ServletUser', true);
           XHR.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

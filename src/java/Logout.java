@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
 import java.io.IOException;
@@ -14,7 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Pablosalazarbr
+ * @author susan
  */
 @WebServlet(urlPatterns = {"/Logout"})
 public class Logout extends HttpServlet {
@@ -32,7 +31,7 @@ public class Logout extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            request.getSession().removeAttribute("user");
+            request.getSession().removeAttribute("mail");
             request.getSession().removeAttribute("pass");
             request.getSession().invalidate();
             response.sendRedirect(request.getContextPath()+"/index.jsp");

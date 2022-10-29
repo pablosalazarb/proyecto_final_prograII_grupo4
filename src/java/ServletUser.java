@@ -2,6 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
+import Clases.LinkStart;
+import Clases.UsuarioVec;
+import Clases.UsuarioModell;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -40,9 +43,11 @@ public class ServletUser extends HttpServlet {
             
             if(control.toUpperCase().equals("GUARDAR")){
             usuarios=new UsuarioModell(
+            Integer.parseInt(request.getParameter("idu")),
             request.getParameter("user"),
+            request.getParameter("mail"),
             request.getParameter("pass"),
-            request.getParameter("tipUsr"));
+            Integer.parseInt(request.getParameter("tipUsr")));
             
             regUsr.saveUsr(usuarios);
             }else if (control.toUpperCase().equals("ELIMINAR")){

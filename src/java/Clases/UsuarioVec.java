@@ -1,3 +1,5 @@
+package Clases;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -22,7 +24,7 @@ public class UsuarioVec {
     private ResultSet result = null; 
     
     public UsuarioVec(){
-        this.tabUsr = new UsuarioModell[10];
+        this.tabUsr = new UsuarioModell[100];
         this.ind=0;
     }
     
@@ -41,14 +43,16 @@ public class UsuarioVec {
     }
     
     public boolean saveuserBD(UsuarioModell usuarios){        
-        String sql = "INSERT INTO mydb.usuario(nombre, correo_electronico, password)";
-             sql += " VALUES( ?,?,?)"; 
+        String sql = "INSERT INTO mydb.usuario(id, nombre, correo_electronico, password, rol_id)";
+             sql += " VALUES( ?,?,?,?,?)"; 
         try{
             starConex();
-            statement = conexion.prepareStatement(sql); 
+            statement = conexion.prepareStatement(sql);
+            statement.setInt(1, usuarios.getIdu());
             statement.setString(2, usuarios.getUser());
-            statement.setString(3, usuarios.getPass());
-            statement.setString(4, usuarios.getTipUsr());
+            statement.setString(3, usuarios.getMail());
+            statement.setString(4, usuarios.getPass());
+            statement.setInt(5, usuarios.getTipUsr());
              int resultado = statement.executeUpdate(); 
                 if(resultado > 0){
                     return true;
@@ -61,34 +65,7 @@ public class UsuarioVec {
         }    
     }
     
-    public boolean loginv(UsuarioModell usuarios){    
-           
-        String sql = "SELECT nombre, correo_electronico, password FROM usuario WHERE usuario = ?";
-
-        try{
-        
-            starConex();
-            statement= conexion.prepareStatement(sql); 
-            result = statement.executeQuery(); 
-            statement.setString(1, usuarios.getUser());
-            
-            if(result.next()){
-                if(usuarios.getPass().equals(result.getString(3))){
-                    usuarios.setTipUsr(result.getString(4));
-                    return true;
-                }else {return false;}
-            
-            } return false;
-
-        }catch(SQLException e){
-            String error = e.getMessage();  
-            return false;
-        }    
-          
-    }
-    
-
-    
+   
     
     public void bdView(StringBuffer out){   
         String sql="select * from mydb.usuario";
@@ -100,10 +77,10 @@ public class UsuarioVec {
             if (result!=null){
                 while (result.next()){
                 out.append("<tr>");
+                out.append("<td >").append(result.getString("id")).append("</td>");
                 out.append("<td >").append(result.getString("nombre")).append("</td>");
-                out.append("<td >").append(result.getString("correo_electronico")).append("</td>");
-                out.append("<td >").append(result.getString("password")).append("</td>");
-                out.append("<td id=\"").append(result.getString("nombre"))
+                out.append("<td >").append(result.getString("rol_id")).append("</td>");
+                out.append("<td id=\"").append(result.getString("id"))
                         .append("\"  onclick=\"eliminaruser(this.id);\">") 
                         .append(" <a class=\"btn btn-danger\"'> <i class=\"bi bi-trash\"></i> </a>"
                                 + " <td></tr>");
@@ -113,7 +90,7 @@ public class UsuarioVec {
     }
     
      public String eliminaruserBd(int codi){        
-        String sql = "DELETE FROM usuario WHERE idUsuario="+codi;              
+        String sql = "DELETE FROM usuario WHERE id="+codi;              
        try{     
             starConex();
             statement = conexion.prepareStatement(sql); 

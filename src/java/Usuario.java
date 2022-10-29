@@ -1,49 +1,42 @@
 
-import Utilidades.ConexionBaseDeDatos;
+import Clases.LinkStart;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *
- * @author Pablosalazarbr
+ * @author susan
  */
 public class Usuario {
-    private ConexionBaseDeDatos conectorBD;
+    private LinkStart conectorBD;
     private Connection conexion;
     private PreparedStatement statement = null;
     private ResultSet result = null;
     
     public Usuario(){
-        this.conectorBD=new ConexionBaseDeDatos();
+        this.conectorBD=new LinkStart();
     }
     
     public String validarUsuario(String user, String pass){
-        String sql = "SELECT * FROM usuario WHERE usuario = '" + user + "' AND contrasenia = '"+pass+"'";
+        String sql = "SELECT * FROM usuario WHERE correo_electronico = '" + user + "' AND password = '"+pass+"'";
         try{
-            this.conexion = this.conectorBD.conectar(); //Abrimos la conexion sql
-            this.statement = conexion.prepareStatement(sql); //Preparamos la consulta a realizar
-            this.result=this.statement.executeQuery(); //Ejcutamos el query sql y recibimos un resultado
-            //Si el resultado NO es nulo, entonces...
+            this.conexion = this.conectorBD.conectar();
+            this.statement = conexion.prepareStatement(sql);
+            this.result=this.statement.executeQuery();
             if(result != null){
-                String usuarioEncontrado=""; //Creamos la variable string del usuario encontrado
-                //Mientras el resultado sea verdadero (en el caso que obtengamos un registro)
+                 String usuarioEncontrado="";
                 while (result.next()){
-                    usuarioEncontrado= result.getString("usuario"); //Almacenamos el nombre del usuario en la variable usuarioencontrado
+                    usuarioEncontrado= result.getString("correo_electronico");
                 }
-                return usuarioEncontrado; //Devolvemos como resultado la vvariable usuarioencontrado
+                return usuarioEncontrado;
             }
-            return "Usuario no encontrado"; //Caso contrario devolvemos un texto de usuario no encontrado
+            return "Usuario no encontrado";
         }
         catch(SQLException e){
-           return e.getMessage(); //Guardamos el mensaje de error si lo hubiera
+           return e.getMessage();
         }
     }
 }

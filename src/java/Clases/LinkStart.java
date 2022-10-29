@@ -1,3 +1,5 @@
+package Clases;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -13,7 +15,7 @@ import java.sql.SQLException;
  * @author susan
  */
 public class LinkStart {
-    private String url="jdbc:mysql://localhost:3307/nekoshop";//url de MySQL
+    private String url="jdbc:mysql://localhost:3307/mydb";//url de MySQL
     private String usuario="root";
     private String clave="1234"; 
     private Connection conexion=null;  

@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
 import java.io.IOException;
@@ -12,15 +11,13 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-
 /**
  *
- * @author JP
+ * @author susan
  */
 @WebServlet(urlPatterns = {"/NewServlet"})
 public class NewServlet extends HttpServlet {
     Usuario usuario;
-
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -35,7 +32,7 @@ public class NewServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             usuario = new Usuario();
-            String user = request.getParameter("user");
+            String user = request.getParameter("mail");
             String pass = request.getParameter("pass");
             if(user.equals("")||pass.equals("")){
                 request.setAttribute("success", 0);
@@ -43,11 +40,11 @@ public class NewServlet extends HttpServlet {
                 request.getRequestDispatcher("/index.jsp").forward(request, response);
             }
             
-            String usuarioConsultado= usuario.validarUsuario(request.getParameter("user"), request.getParameter("pass"));
-            if(usuarioConsultado.equals(request.getParameter("user"))){
-               request.getSession().setAttribute("user", request.getParameter("user"));
+            String usuarioConsultado= usuario.validarUsuario(request.getParameter("mail"), request.getParameter("pass"));
+            if(usuarioConsultado.equals(request.getParameter("mail"))){
+               request.getSession().setAttribute("mail", request.getParameter("mail"));
                 request.getSession().setAttribute("pass", request.getParameter("pass"));
-                response.sendRedirect(request.getContextPath()+"/AlumnoController");              
+                response.sendRedirect(request.getContextPath()+"/UserController");              
             }else{
                 request.setAttribute("success", 0);
                 request.setAttribute("mensaje", "Usuario y/o contraseña no encontrado");
