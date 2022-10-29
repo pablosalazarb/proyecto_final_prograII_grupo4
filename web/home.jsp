@@ -84,13 +84,14 @@
                   <div class="overlay"></div>
                   <div class="content">
                     
-                              <form class="form-register" method="dialog" action="#">
+                              <form class="form-register" method="dialog" action="#" id="formpro">
                                <div class="close-container"> <button class="close-btn" onclick="togglePopup()">&times;</button></div>
                                 <div class="title">S O F T E C H</div> 
                                 <div class="user-details">
                                   <div class="input-box">
                                     <span class="details">ID</span>
                                     <input type="text" placeholder="Identification code" id="idp" required>
+                                    <input type="hidden" name="control" value="GUARDAR">
                                   </div>
                                   <div class="input-box">
                                     <span class="details">Project</span>
@@ -128,7 +129,7 @@
                                   
 
                                 <div class="button">
-                                  <input type="submit" value="!S U B M I T¡">
+                                    <input type="submit" value="!S U B M I T¡" onclick="sendDataPro()">
                                 </div>
                                 </div>       
                               </form></div>

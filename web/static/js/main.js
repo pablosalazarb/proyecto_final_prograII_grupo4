@@ -75,6 +75,19 @@ function sendData(){
             susMsj('Registro Exitoso'); }};
           XHR.send(formData);	
 }
+
+function sendDataPro(){
+	const XHR = new XMLHttpRequest();
+	  var formData = new URLSearchParams(new FormData(document.getElementById('formpro'))).toString();
+	  XHR.addEventListener('error',(event) => {alert('Oops! ah ocurrido un error (T_T)');});
+	  XHR.open('POST', 'ServletProject', true);
+          XHR.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    
+          XHR.onload = () => { if (XHR.readyState === XHR.DONE && XHR.status === 200){
+            console.log("response => " + XHR.response);
+            susMsj('Registro Exitoso'); }};
+          XHR.send(formData);	
+}
 function susMsj(msj){
   Swal.fire({
   icon: 'success',
