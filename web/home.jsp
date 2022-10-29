@@ -90,35 +90,48 @@
                                 <div class="user-details">
                                   <div class="input-box">
                                     <span class="details">ID</span>
-                                    <input type="text" placeholder="Identification code" required>
+                                    <input type="text" placeholder="Identification code" id="idp" required>
                                   </div>
                                   <div class="input-box">
                                     <span class="details">Project</span>
-                                    <input type="text" placeholder="Enter username" required>
-                                  </div>
-                                  <div class="input-box">
-                                    <span class="details">Software</span>
-                                    <input type="text" placeholder="Enter type" required>
-                                  </div>
-                                  <div class="input-box">
-                                    <span class="details">Category</span>
-                                    <input type="text" placeholder="Enter category " required>
+                                    <input type="text" placeholder="Enter username" id="project" required>
                                   </div>
                                   <div class="input-box">
                                     <span class="details">Description</span>
-                                    <input type="text" placeholder="Enter descrption" required>
+                                    <input type="text" placeholder="Enter descrption"  id="description" required>
                                   </div>
                                   <div class="input-box">
-                                    <span class="details">Admin</span>
-                                    <input type="text" placeholder="Enter admin" required>
+                                    <span class="details">Creation Date</span>
+                                    <input type="text" placeholder="Enter descrption"  id="date" required>
                                   </div>
-                                </div>
-                             
+                                  <div class="input-box">
+                                    <span class="details">Manager</span>
+                                    <select class="form-select" id="manager">
+                                        <option selected>Select</option>
+                                        <option value="1">Suzzanne</option>
+                                        <option value="2">Arango</option> 
+                                        <option value="3">Alexander</option>
+                                        <option value="4">Melvin</option></select></div>
+                                   
+                                  <div class="input-box">
+                                    <span class="details">Status</span>
+                                    <select class="form-select" id="estatus">
+                                        <option selected>Select</option>
+                                        <option value="1">Asignado</option>
+                                        <option value="2">En Proceso..</option> 
+                                        <option value="3">Finalizado</option></select></div>
+                                  
+                                  <div class="input-box">
+                                    <span class="details">Category</span>
+                                    <input type="text" placeholder="Enter category " id="category" required>
+                                  </div> 
+                                  
+
                                 <div class="button">
                                   <input type="submit" value="!S U B M I T¡">
                                 </div>
-                                      
-                              </form>
+                                </div>       
+                              </form></div>
                       </div>
                   </div>    
 
