@@ -225,10 +225,7 @@
                  </div>
                  <a href="Logout">Logout - ${UsuarioLogueado}<!------------ CERRAR SESION ------------>
                     <i  class='bx bx-log-out' id="log_out" ></i>
-                    <div class="name_job">
-                      <div class="name">Softech</div>
-                      <div class="job">Procrastinating for a lifetime</div>
-                    </div>
+                   
                 </a>
                  
              </li>

@@ -205,10 +205,7 @@
                 
                      <a href="../../../web/indexLogin.html">
                     <i  class='bx bx-log-out' id="log_out" ></i>
-                    <div class="name_job">
-                      <div class="name">Softech</div>
-                      <div class="job">Procrastinating for a lifetime</div>
-                    </div>
+                  
                 </a>
                  
              </li>
@@ -415,7 +412,7 @@
 
 <!--JavaScript-->
 
+<script src="../static/js/main.js" type="text/javascript"></script>
 
-<script src="../../../web/static/js/main.js" type="text/javascript"></script>
     </body>
 </html>
