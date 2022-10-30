@@ -286,7 +286,7 @@
        
         <div class="card-single">
             <div>
-                <h1>Agregar Js</h1>
+                <h1>5</h1>
                 <span>Customers</span>
             </div>
             <div>
@@ -296,7 +296,7 @@
 
         <div class="card-single">
             <div>
-                <h1>Agregar Js</h1>
+                <h1>3</h1>
                 <span>Projects</span>
             </div>
             <div>
@@ -306,7 +306,7 @@
 
         <div class="card-single">
             <div>
-                <h1>Agregar Js</h1>
+                <h1>2</h1>
                 <span>Order</span>
             </div>
             <div>
@@ -316,7 +316,7 @@
 
         <div class="card-single">
             <div>
-                <h1>Agregar Js</h1>
+                <h1>0</h1>
                 <span>Reports</span>
             </div>
             <div>
