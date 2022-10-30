@@ -43,15 +43,18 @@
                    <span class="tooltip">Search</span>
                 </li>
               <li>
-                <a href="#">
+               
+                    <a href="home.jsp">
                   <i class='bx bx-grid-alt'></i>
                   <span class="links_name">Dashboard</span>
                 </a>
                  <span class="tooltip">Dashboard</span>
               </li>
               <li>
-               <a href="#">
+               
+                  <a href="Vistas/cliente.jsp">
                  <i class='bx bx-user' ></i>
+                 
                  <span class="links_name">User</span>
                </a>
                <span class="tooltip">User</span>
@@ -64,14 +67,14 @@
                <span class="tooltip">Messages</span>
              </li>
              <li>
-               <a href="#">
+                 <a href="Vistas/Collaborator.jsp">
                  <i class='bx bx-pie-chart-alt-2' ></i>
-                 <span class="links_name">Analytics</span>
+                 <span class="links_name">Collaborator</span>
                </a>
-               <span class="tooltip">Analytics</span>
+               <span class="tooltip">Collaborator</span>
              </li>
              <li>
-               <a href="#" >
+                 <a href="Vistas/Projects.jsp">
                  <i  class='bx bx-folder' ></i>
                  <span class="links_name">Project Manager</span>
                </a>
@@ -245,9 +248,7 @@
             <header>
                <h2>
             Dashboard
-            <a href="Vistas/cliente.jsp">Cliente</a>
-            <a href="Vistas/Collaborator.jsp">Collaborator</a>
-            <a href="Vistas/Projects.jsp">Projects</a>
+            
     </h2>
                    
     

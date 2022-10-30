@@ -15,9 +15,9 @@ import java.sql.SQLException;
  * @author susan
  */
 public class LinkStart {
-    private String url="jdbc:mysql://localhost:3307/mydb";//url de MySQL
+    private String url="jdbc:mysql://localhost:3306/mydb";//url de MySQL
     private String usuario="root";
-    private String clave="1234"; 
+    private String clave="root"; 
     private Connection conexion=null;  
     
     public Connection conectar(){   
