@@ -39,7 +39,7 @@
                    <span class="tooltip">Search</span>
                 </li>
               <li>
-                <a href="#">
+                  <a href="../home.jsp">
                   <i class='bx bx-grid-alt'></i>
                   <span class="links_name">Dashboard</span>
                 </a>
